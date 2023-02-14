@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:'home',component: HomeComponent},
   {path: 'signup',component: SignupComponent},
   {path: 'login',component: LoginComponent},
-  {path: 'review-movie',component: ReviewMovieComponent}
+  {path: 'review-movie/:id',component: ReviewMovieComponent}
 ];
 
 @NgModule({

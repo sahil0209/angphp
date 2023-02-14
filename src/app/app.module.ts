@@ -14,7 +14,7 @@ import { BannerComponent } from './banner/banner.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { ReviewMovieComponent } from './review-movie/review-movie.component';
 import {HttpClientModule} from "@angular/common/http";
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,8 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

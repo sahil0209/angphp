@@ -13,4 +13,9 @@ export class MoviesService {
   getMovies(){
     return this.httpClient.get("http://localhost:8888/php-basics/movies-api/movies")
   }
+
+  createReview(review: any){
+    let headers = {'Content-Type': 'application/json'};
+    return this.httpClient.post("http://localhost:8888/php-basics/movies-api/reviews",review,{headers});
+  }
 }
