@@ -1,35 +1,31 @@
 <div class="body">
-    <div class="container">
-    <div class="movie">
-      <div class=" movie-image movie-image-1">
+  <div class="container">
+    <div *ngFor="let movie of movies" class="movie">
+      <img class="movie-image" src="{{movie.poster}}">
         <span><i class="fa fa-align-left"></i></span>
-      </div>
+      
       <div class="movie-info">
-        <p class="title">Iron Man</p>
-        <p class ="genres">Action / DRama / Sci-fi</p>
+        <p class="title">{{ movie.name }}</p>
+        <p class="genres">{{ movie.genre }}</p>
         <div class="movie-text">
           <p>SUMMARY</p>
           <div class="likes">
-            <span><i class="fa fa-thumbs-up"></i>123</span>
+            <span><i class="fa fa-thumbs-up"></i>{{ movie.rating }}</span>
             <span><i class="fa fa-comment"></i>Good one</span>
           </div>
         </div>
-        <div class ="summary">
+        <div class="summary">
           <p class="text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-            unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
-            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
-            PageMaker including versions of Lorem Ipsum.
+            {{ movie.description }}
           </p>
           <p class="cast">
-            Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet, consectetur, adipisci velit.
+            {{ movie.cast }}
           </p>
         </div>
         <div class="actions">
-          <button><i class ="fa fa-play">Watch Trailer</i></button>
+          <a class="button" routerLink="review-movie"
+            ><i class="fa fa-play">Watch Trailer</i></a
+          >
           <div class="actions-more">
             <i class="fa fa-save"></i>
             <i class="fa fa-bookmark"></i>
@@ -37,16 +33,15 @@
           </div>
         </div>
       </div>
-    
     </div>
-    
+
     <div class="movie">
-      <div class=" movie-image movie-image-2">
+      <div class="movie-image movie-image-2">
         <span><i class="fa fa-align-left"></i></span>
       </div>
       <div class="movie-info">
         <p class="title">Pathaan</p>
-        <p class ="genres">Action / DRama / Sci-fi</p>
+        <p class="genres">Action / DRama / Sci-fi</p>
         <div class="movie-text">
           <p>SUMMARY</p>
           <div class="likes">
@@ -54,22 +49,27 @@
             <span><i class="fa fa-comment"></i>Good one</span>
           </div>
         </div>
-        <div class ="summary">
+        <div class="summary">
           <p class="text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-            unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
-            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
           <p class="cast">
-            Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet, consectetur, adipisci velit.
+            Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet,
+            consectetur, adipisci velit.
           </p>
         </div>
         <div class="actions">
-          <button><i class ="fa fa-play">Watch Trailer</i></button>
+          <a class="button" routerLink="review-movie"
+            ><i class="fa fa-play">Watch Trailer</i></a
+          >
           <div class="actions-more">
             <i class="fa fa-save"></i>
             <i class="fa fa-bookmark"></i>
@@ -78,15 +78,14 @@
         </div>
       </div>
     </div>
-    
-    
+
     <div class="movie">
-      <div class=" movie-image movie-image-3">
+      <div class="movie-image movie-image-3">
         <span><i class="fa fa-align-left"></i></span>
       </div>
       <div class="movie-info">
         <p class="title">Thor: Love and Thunder</p>
-        <p class ="genres">Action / DRama / Sci-fi</p>
+        <p class="genres">Action / DRama / Sci-fi</p>
         <div class="movie-text">
           <p>SUMMARY</p>
           <div class="likes">
@@ -94,22 +93,27 @@
             <span><i class="fa fa-comment"></i>Good one</span>
           </div>
         </div>
-        <div class ="summary">
+        <div class="summary">
           <p class="text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-            unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
-            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
           <p class="cast">
-            Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet, consectetur, adipisci velit.
+            Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet,
+            consectetur, adipisci velit.
           </p>
         </div>
         <div class="actions">
-          <button><i class ="fa fa-play">Watch Trailer</i></button>
+          <a class="button" routerLink="review-movie"
+            ><i class="fa fa-play">Watch Trailer</i></a
+          >
           <div class="actions-more">
             <i class="fa fa-save"></i>
             <i class="fa fa-bookmark"></i>
@@ -118,15 +122,14 @@
         </div>
       </div>
     </div>
-    
-    
+
     <div class="movie">
-      <div class=" movie-image movie-image-4">
+      <div class="movie-image movie-image-4">
         <span><i class="fa fa-align-left"></i></span>
       </div>
       <div class="movie-info">
         <p class="title">Captain America: Civil War</p>
-        <p class ="genres">Action / DRama / Sci-fi</p>
+        <p class="genres">Action / DRama / Sci-fi</p>
         <div class="movie-text">
           <p>SUMMARY</p>
           <div class="likes">
@@ -134,22 +137,27 @@
             <span><i class="fa fa-comment"></i>Good one</span>
           </div>
         </div>
-        <div class ="summary">
+        <div class="summary">
           <p class="text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-            unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
-            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
           <p class="cast">
-            Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet, consectetur, adipisci velit.
+            Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet,
+            consectetur, adipisci velit.
           </p>
         </div>
         <div class="actions">
-          <button><i class ="fa fa-play">Watch Trailer</i></button>
+          <a class="button" routerLink="review-movie"
+            ><i class="fa fa-play">Watch Trailer</i></a
+          >
           <div class="actions-more">
             <i class="fa fa-save"></i>
             <i class="fa fa-bookmark"></i>
@@ -159,12 +167,12 @@
       </div>
     </div>
     <div class="movie">
-      <div class=" movie-image movie-image-5">
+      <div class="movie-image movie-image-5">
         <span><i class="fa fa-align-left"></i></span>
       </div>
       <div class="movie-info">
         <p class="title">Avatar</p>
-        <p class ="genres">Action / DRama / Sci-fi</p>
+        <p class="genres">Action / DRama / Sci-fi</p>
         <div class="movie-text">
           <p>SUMMARY</p>
           <div class="likes">
@@ -172,22 +180,27 @@
             <span><i class="fa fa-comment"></i>Good one</span>
           </div>
         </div>
-        <div class ="summary">
+        <div class="summary">
           <p class="text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-            unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
-            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
           <p class="cast">
-            Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet, consectetur, adipisci velit.
+            Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet,
+            consectetur, adipisci velit.
           </p>
         </div>
         <div class="actions">
-          <button><i class ="fa fa-play">Watch Trailer</i></button>
+          <a class="button" routerLink="review-movie"
+            ><i class="fa fa-play">Watch Trailer</i></a
+          >
           <div class="actions-more">
             <i class="fa fa-save"></i>
             <i class="fa fa-bookmark"></i>
@@ -195,44 +208,49 @@
           </div>
         </div>
       </div>
-      </div>
-      <div class="movie">
-        <div class=" movie-image movie-image-6">
-          <span><i class="fa fa-align-left"></i></span>
-        </div>
-        <div class="movie-info">
-          <p class="title">Puspha - 2</p>
-          <p class ="genres">Action / DRama / Sci-fi</p>
-          <div class="movie-text">
-            <p>SUMMARY</p>
-            <div class="likes">
-              <span><i class="fa fa-thumbs-up"></i>123</span>
-              <span><i class="fa fa-comment"></i>Good one</span>
-            </div>
-          </div>
-          <div class ="summary">
-            <p class="text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-              unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, 
-              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
-              containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
-              PageMaker including versions of Lorem Ipsum.
-            </p>
-            <p class="cast">
-              Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet, consectetur, adipisci velit.
-            </p>
-          </div>
-          <div class="actions">
-            <button><i class ="fa fa-play">Watch Trailer</i></button>
-            <div class="actions-more">
-              <i class="fa fa-save"></i>
-              <i class="fa fa-bookmark"></i>
-              <i class="fa fa-share-alt"></i>
-            </div>
-          </div>
-        </div>
-        </div>
     </div>
+    <div class="movie">
+      <div class="movie-image movie-image-6">
+        <span><i class="fa fa-align-left"></i></span>
+      </div>
+      <div class="movie-info">
+        <p class="title">Puspha - 2</p>
+        <p class="genres">Action / DRama / Sci-fi</p>
+        <div class="movie-text">
+          <p>SUMMARY</p>
+          <div class="likes">
+            <span><i class="fa fa-thumbs-up"></i>123</span>
+            <span><i class="fa fa-comment"></i>Good one</span>
+          </div>
+        </div>
+        <div class="summary">
+          <p class="text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+          <p class="cast">
+            Neque porro quisquam, est qui dolorem ipsum ,quia dolor sit amet,
+            consectetur, adipisci velit.
+          </p>
+        </div>
+        <div class="actions">
+          <a class="button" routerLink="review-movie"
+            ><i class="fa fa-play">Watch Trailer</i></a
+          >
+          <div class="actions-more">
+            <i class="fa fa-save"></i>
+            <i class="fa fa-bookmark"></i>
+            <i class="fa fa-share-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

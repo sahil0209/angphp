@@ -8,7 +8,6 @@
 }
 
 div.body{
-
   height:100%;
   background: url('../../assets/lmovies_bg.jpeg');
   background-size: cover;
@@ -149,7 +148,7 @@ div.body{
   justify-content: space-between;
 }
 
-button{
+.button{
 
   padding: 3px 8px;
   background: transparent;
